@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-US-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e947a0c937.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("qLm91YYQbvTqGFGNz");
+        })();
+     </script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="#" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#my-work">My Work</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>web developer</p>
+                <h1>Hi, I'm <span>Samuel </span><br><span>Tepanyega</span> from <br>Polokwwane</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------------about -------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/IMG-20230828-WA0153.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>
+                        I'm a passionate software developer. 
+                        I have a keen eye for detail and love experimenting with new technologies. 
+                        My goal is to create engaging and visually appealing websites that help people connect and find their next great idea.
+                    </p>
+ 
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <P class="tab-links" onclick="opentab('projects')">Projects</P>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing web interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>GAMES Development</span><br>Building GAMES</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>BACHELOR OF SCIENCE HONORS IN COMPUTER SCIENCES</li>
+                            <li><span>2022</span><br>BACHELOR OF SCIENCE IN MATHEMATICAL SCIENCE</li>
+                            <li><span>2019</span><br>MATRIC</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>JAVA DEVELOPER</li>
+                            <li><span>2023 </span><br>LAB ASSISTANT</li>
+                            <li><span>2023 </span><br>DATABASE DEVELOPER</li>
+                            <li><span>2022</span><br>SAAS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>2024 </span><br> <a href="https://github.com/Tepanyega/project">DASHBOARD</a></li>
+                            <li><span>2023 </span><br><a href="https://github.com/Tepanyega/computer-stor">COMPUTER STORE</a></li>
+                            <li><span>2023 </span><br><a href="https://github.com/Tepanyega/E-commerce">eCOMMERCE APPLICATION</a></li>                           </li>
+                            <li><span>2023</span><br><a href="https://github.com/Tepanyega/weather-frontEnd">WEATHER APP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------Projects---------------->
+     <div id="project">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+                <div class="projects-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Dashboard</h2>
+                        <p>
+                            I developed an intuitive Admin Dashboard using C# that seamlessly integrates with a database for efficient data management.
+                        </p>
+                        <a href="https://github.com/Tepanyega/project/tree/master">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-store"></i>
+                        <h2>E-commerce</h2>
+                        <p>
+                            I developed an e-commerce website using Django framework that allows users to browse, add products to cart, and make purchases.
+                        </p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cloud"></i>
+                        <h2>Weather App</h2>
+                        <p>
+                            I developed a weather app using HTML, CSS, and JavaScript that displays the current weather conditions and forecasts for the next 5 days.
+                        
+                        </p>
+                        <a href="https://github.com/Tepanyega/weather-frontEnd">learn more</a>
+                    </div>
+                   <div>
+                        <i class="fa-brands fa-researchgate"></i>
+                        <h2>Research project</h2>
+                        <p>The recognition of human emotion in conversation for call centre task enhancement.
+                         </p>
+                        <a href="https://docs.google.com/document/d/14obqQk_LMZfS65PeDqyeb5c1B86ALWgS0eDulkNUyyo/edit?usp=sharing">learn more</a>
+                    </div>
+                </div>
+           
+        </div>
+     </div>
+    <!---------------Portfolio-------------->
+    <div id="my-work">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/rahul-mishra-glmeeU0zabw-unsplash.jpg">
+                    <div class="layer">
+                        <h3>Social media app</h3>
+                        <p>the app connects you to the talented people around the world.
+                            Download it from play store.
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Screenshot (369).png">
+                    <div class="layer">
+                        <h3>SMusic App app</h3>
+                        <p>the app connects you to the talented people around the world.
+                            Download it from play store.
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Picture2.png">
+                    <div class="layer">
+                        <h3>Reseach Projetc</h3>
+                        <p>This research work proposes an approach for real-time speech emotion-recognition 
+                             using CNN.
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div        
+ 
+    <!-- ------------Contacts--------------- -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>samuelmonepe@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>0750609435</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter-square"></i></a>
+                            <a href="https://www.linkedin.com/in/tepanyega/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Tepanyega"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <a href="#" download class="btn btn2">Download CV</a>
+                       
+                    </div>
+ 
+                    <div class="contact-right">
+                        <form action="">
+                            <input type="text" id="fullName" name="Name" placeholder="Your name" required>
+                            <input type="email" id="email_Id" name="email" placeholder="Your email" required>
+                            <textarea name="message" id="message" rows="6" placeholder="Your message" ></textarea>
+                            <button type="submit" class="btn btn2" onclick="sendMail()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+               
+               
+            </div>
+        </div>
+ 
+ 
+ 
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+ 
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        function sendMail(){
+            var parms = {
+                fullName :  document.getElementById("fullName").value,
+                email_Id : document.getElementById("email_Id").value,
+                message : document.getElementById("message").value
+            }
+            emailjs.send("service_6wdy0o8", "template_zsewqdm", parms).then(alert("Email sent successfully!"));
+        }
+
+      
+        
+    
+    </script>
+</body>
+</html>
