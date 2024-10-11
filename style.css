@@ -324,3 +324,15 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 }
+
+/* creating magig*/
+#header,
+#about,
+#projects,
+#my-work,
+#contact{
+    width: 100vh;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
