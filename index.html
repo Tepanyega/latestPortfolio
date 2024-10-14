@@ -16,7 +16,7 @@
                     <p><span>Tepanyega</span></p>
                 </div>
                 <!-- <img src="#" class="logo"> -->
-                <ul id="sidemenu">
+                <ul>
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#project">Projects</a></li>
@@ -40,17 +40,18 @@
                     <img src="images/IMG-20230828-WA0153.jpg">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
+                    <h2 class="sub-title">About me</h2>
                     <p>
                         I'm a passionate software developer. 
                         I have a keen eye for detail and love experimenting with new technologies. 
                         My goal is to create engaging and visually appealing websites that help people connect and find their next great idea.
                     </p>
+ 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <!--<P class="tab-links" onclick="opentab('projects')">Projects</P> -->
+                        <!--<P class="tab-links" onclick="opentab('projects')">Projects</P>-->
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -74,7 +75,7 @@
                             <li><span>2022</span><br>SAAS</li>
                         </ul>
                     </div>
-                    <!--<div class="tab-contents" id="projects">
+                 <!--<div class="tab-contents" id="projects">
                         <ul>
                             <li><span>2024 </span><br> <a href="https://github.com/Tepanyega/project">DASHBOARD</a></li>
                             <li><span>2023 </span><br><a href="https://github.com/Tepanyega/computer-stor">COMPUTER STORE</a></li>
@@ -87,9 +88,9 @@
         </div>
     </div>
     <!-- -----------Projects---------------->
-    <div id="project">
+     <div id="project">
         <div class="container">
-            <h1 class="sub-title">My Projects</h1>
+            <h2 class="sub-title">My Projects</h2>
                 <div class="projects-list">
                     <div>
                         <i class="fa-solid fa-code"></i>
@@ -103,7 +104,7 @@
                         <i class="fa-regular fa-store"></i>
                         <h2>E-commerce</h2>
                         <p>
-                            I developed an e-commerce website using Lavarel framework that allows users to browse, add products to cart, and make purchases.
+                            I developed an e-commerce website using Django framework that allows users to browse, add products to cart, and make purchases.
                         </p>
                         <a href="https://github.com/Tepanyega/E-commerce">learn more</a>
                     </div>
@@ -116,23 +117,23 @@
                         </p>
                         <a href="https://github.com/Tepanyega/weather-frontEnd">learn more</a>
                     </div>
-                    <div>
+                   <div class="hidden">
                         <i class="fa-brands fa-researchgate"></i>
                         <h2>Research project</h2>
-
-                        <p>The recognition of human emotion in conversation for call centre task enhancement.</p>
-
+                        <p>The recognition of human emotion in conversation for call centre task enhancement.
+                         </p>
                         <a href="https://docs.google.com/document/d/14obqQk_LMZfS65PeDqyeb5c1B86ALWgS0eDulkNUyyo/edit?usp=sharing">learn more</a>
-
                     </div>
                 </div>
+                <!--<button class="btn">See more</button>-->
+                <a  class="btn">See more</a> 
            
         </div>
      </div>
     <!---------------Portfolio-------------->
     <div id="my-work">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h2 class="sub-title">My Work</h2>
             <div class="work-list">
                 <div class="work">
                     <img src="images/rahul-mishra-glmeeU0zabw-unsplash.jpg">
@@ -165,16 +166,17 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+           <a href="#" class="btn">See more</a>
+           <!-- <button class="btn">See more</button> -->
         </div>
     </div        
  
-    <!-- ------------Contacts----------------->
+    <!-- ------------Contacts--------------- -->
         <div id="contact">
             <div class="container">
                 <div class="row">
                     <div class="contact-left">
-                        <h1 class="sub-title">Contact me</h1>
+                        <h2 class="sub-title">Contact me</h2>
                         <p><i class="fa-solid fa-paper-plane"></i>samuelmonepe@gmail.com</p>
                         <p><i class="fa-solid fa-phone"></i>0750609435</p>
                         <div class="social-icons">
@@ -189,7 +191,7 @@
                     </div>
  
                     <div class="contact-right">
-                        <form name="submit-to-google-sheet">
+                        <form name="submit-to-google-sheet">>
                             <input type="text" id="fullName" name="Name" placeholder="Your name" required>
                             <input type="email" id="email_Id" name="email" placeholder="Your email" required>
                             <textarea name="message" id="message" rows="6" placeholder="Your message" ></textarea>
@@ -198,30 +200,34 @@
                         <span id="msg"></span>
                     </div>
                 </div>
+               
+               
             </div>
-            <div class="copyright">
-                <p>copyright @ Tepanyega.</p>
-            </div>
+            <div>
+                <div class="copyright">
+                    <p>�� 2024 Tepanyega. All rights reserved.</p>
+    
+                </div>
         </div>
  
-    <!-- script -->
+ <!-- script -->
+ 
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabContents = document.getElementsByClassName("tab-contents");
         
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+ 
         function opentab(tabname) {
-
-            for(tablink of tablinks) {
+            for(tablink of tablinks){
                 tablink.classList.remove("active-link");
             }
-
-            for(tabContent of tabContents){
-                tabContent.classList.remove("active-tab");
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
             }
-
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
-        }
+        }    
+
     </script>
 
     <script>
@@ -243,7 +249,6 @@
         document.querySelector(".fas.fa-times").onclick = closemenu;
     });
     </script>
-
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxKwdUgVdYRdhrzfnEZ9gPQwv8r3BzjSyfSSv67CsodLNGzTvK3FIKmbJX55dM01Vcq/exec'
         const form = document.forms['submit-to-google-sheet']
@@ -260,7 +265,18 @@
             })
             .catch(error => console.error('Error!', error.message))
         })
-      </script>
+    </script>
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            const hidden = document.querySelector(".hidden");
+
+            hidden.foeEach(item => {
+            item.classList.toggle("show");
+            item.style.display = item.classList.contains("show") ? "block" : "none";
+            });
+            this.textContent = hidden[0].classList.contains("show") ? "See Less" : "See More";
+        });
+    </script>
 
 </body>
 </html>
