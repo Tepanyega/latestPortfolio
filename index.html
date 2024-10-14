@@ -7,18 +7,6 @@
     <title>Personal portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e947a0c937.js" crossorigin="anonymous"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-           emailjs.init("qLm91YYQbvTqGFGNz");
-        })();
-     </script>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <div id="header">
@@ -28,13 +16,15 @@
                     <p><span>Tepanyega</span></p>
                 </div>
                 <!-- <img src="#" class="logo"> -->
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#project">Projects</a></li>
                     <li><a href="#my-work">My Work</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#contact">Contacts</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>web developer</p>
@@ -56,12 +46,11 @@
                         I have a keen eye for detail and love experimenting with new technologies. 
                         My goal is to create engaging and visually appealing websites that help people connect and find their next great idea.
                     </p>
- 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <P class="tab-links" onclick="opentab('projects')">Projects</P>
+                        <!--<P class="tab-links" onclick="opentab('projects')">Projects</P> -->
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -85,20 +74,20 @@
                             <li><span>2022</span><br>SAAS</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id="projects">
+                    <!--<div class="tab-contents" id="projects">
                         <ul>
                             <li><span>2024 </span><br> <a href="https://github.com/Tepanyega/project">DASHBOARD</a></li>
                             <li><span>2023 </span><br><a href="https://github.com/Tepanyega/computer-stor">COMPUTER STORE</a></li>
                             <li><span>2023 </span><br><a href="https://github.com/Tepanyega/E-commerce">eCOMMERCE APPLICATION</a></li>                           </li>
                             <li><span>2023</span><br><a href="https://github.com/Tepanyega/weather-frontEnd">WEATHER APP</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
     <!-- -----------Projects---------------->
-     <div id="project">
+    <div id="project">
         <div class="container">
             <h1 class="sub-title">My Projects</h1>
                 <div class="projects-list">
@@ -114,9 +103,9 @@
                         <i class="fa-regular fa-store"></i>
                         <h2>E-commerce</h2>
                         <p>
-                            I developed an e-commerce website using Django framework that allows users to browse, add products to cart, and make purchases.
+                            I developed an e-commerce website using Lavarel framework that allows users to browse, add products to cart, and make purchases.
                         </p>
-                        <a href="#">learn more</a>
+                        <a href="https://github.com/Tepanyega/E-commerce">learn more</a>
                     </div>
                     <div>
                         <i class="fa-solid fa-cloud"></i>
@@ -127,12 +116,14 @@
                         </p>
                         <a href="https://github.com/Tepanyega/weather-frontEnd">learn more</a>
                     </div>
-                   <div>
+                    <div>
                         <i class="fa-brands fa-researchgate"></i>
                         <h2>Research project</h2>
-                        <p>The recognition of human emotion in conversation for call centre task enhancement.
-                         </p>
+
+                        <p>The recognition of human emotion in conversation for call centre task enhancement.</p>
+
                         <a href="https://docs.google.com/document/d/14obqQk_LMZfS65PeDqyeb5c1B86ALWgS0eDulkNUyyo/edit?usp=sharing">learn more</a>
+
                     </div>
                 </div>
            
@@ -178,7 +169,7 @@
         </div>
     </div        
  
-    <!-- ------------Contacts--------------- -->
+    <!-- ------------Contacts----------------->
         <div id="contact">
             <div class="container">
                 <div class="row">
@@ -193,59 +184,83 @@
                             <a href="https://www.linkedin.com/in/tepanyega/"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="https://github.com/Tepanyega"><i class="fa-brands fa-github"></i></a>
                         </div>
-                        <a href="#" download class="btn btn2">Download CV</a>
+                        <a href="images/resume.docx" download class="btn btn2">Download CV</a>
                        
                     </div>
  
                     <div class="contact-right">
-                        <form action="">
+                        <form name="submit-to-google-sheet">
                             <input type="text" id="fullName" name="Name" placeholder="Your name" required>
                             <input type="email" id="email_Id" name="email" placeholder="Your email" required>
                             <textarea name="message" id="message" rows="6" placeholder="Your message" ></textarea>
                             <button type="submit" class="btn btn2" onclick="sendMail()">Submit</button>
                         </form>
+                        <span id="msg"></span>
                     </div>
                 </div>
-               
-               
+            </div>
+            <div class="copyright">
+                <p>copyright @ Tepanyega.</p>
             </div>
         </div>
  
- 
- 
+    <!-- script -->
     <script>
-        
         var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
- 
+        var tabContents = document.getElementsByClassName("tab-contents");
+        
         function opentab(tabname) {
-            for(tablink of tablinks){
+
+            for(tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
+
+            for(tabContent of tabContents){
+                tabContent.classList.remove("active-tab");
             }
+
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
 
-        function sendMail(){
-            var parms = {
-                fullName :  document.getElementById("fullName").value,
-                email_Id : document.getElementById("email_Id").value,
-                message : document.getElementById("message").value
-            }
-            emailjs.send("service_6wdy0o8", "template_zsewqdm", parms).then(alert("Email sent successfully!"));
+    <script>
+        //wrap js code in an event listener for DOMContentLoaded to ensure it runs after the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded",function(){
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
         }
 
-                    // use a script tag or an external JS file
-            document.addEventListener("DOMContentLoaded", (event) => {
-            gsap.registerPlugin(ScrollTrigger)
-            // gsap code here!
-            });
-      
-        
-    
+        function closemenu(){
+            sidemenu.style.right = "-250px";
+        }
+
+        //attach event listeners
+        document.querySelector(".fas.fa-bars").onclick = openmenu;
+        document.querySelector(".fas.fa-times").onclick = closemenu;
+    });
     </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxKwdUgVdYRdhrzfnEZ9gPQwv8r3BzjSyfSSv67CsodLNGzTvK3FIKmbJX55dM01Vcq/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {msg.innerHTML = "Message sent successfully"
+                setTimeout(function() {
+                    msg.innerHTML =""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
 </body>
 </html>
