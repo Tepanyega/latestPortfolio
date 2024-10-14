@@ -9,6 +9,12 @@
     grid-gap: 40px;
     margin-top: 50px;
 }
+.work-list div i{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #66BB6A;
+   
+}
 .work{
     border-radius: 10px;
     position: relative;
@@ -49,7 +55,7 @@
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+   /* background: #fff;*/
     width: 60px;
     height: 60px;
     border-radius: 50%;
