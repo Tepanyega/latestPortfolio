@@ -22,17 +22,14 @@ body{
 
 }
  
+.hidden{
+    display: none;
 
-/* About */
+}
+.show{
+    display: block;
+}
 
- 
-/* Projects */
-
- 
-/* portfolio */
- 
-/* Contact */
-/* css for small screens */
 nav .fas{
     display: none;
 
@@ -111,15 +108,3 @@ nav ul .fas{
 
 }
 
-@media (max-width: 768px) {
-    /* Styles for tablets and smaller devices */
-
-}
-
-@media (max-width: 480px) {
-    /* Styles for mobile devices */
-    #header{
-        background-image: url('#');
-    }
-   
-}
