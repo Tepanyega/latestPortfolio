@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     background-image: url(/images/Designer__3_-removebg-preview.png);
-    background-size: 50%; /* Resize the image to 50% of the container */
+    background-size: 35%; /* Resize the image to 50% of the container */
     background-position: right center; /* Push the image to the right, centered vertically */
     background-repeat: no-repeat; /* Ensure the image doesn’t repeat */
 }
