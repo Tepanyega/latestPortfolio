@@ -119,11 +119,12 @@
                     </div>
                 </div>
                 <!--<button class="btn">See more</button>-->
-                <a  class="btn">See more</a> 
+                <a  id="btn" class="btn">See more</a> 
            
         </div>
      </div>
-          
+    <!---------------Portfolio-------------->
+       
  
     <!-- ------------Contacts--------------- -->
         <div id="contact">
@@ -221,15 +222,16 @@
     </script>
     <script>
         document.getElementById("btn").addEventListener("click", function(){
-            const hidden = document.querySelector(".hidden");
-
-            hidden.foeEach(item => {
-            item.classList.toggle("show");
-            item.style.display = item.classList.contains("show") ? "block" : "none";
-            });
-            this.textContent = hidden[0].classList.contains("show") ? "See Less" : "See More";
+            const hidden = document.querySelector(".hidden");  // Select the hidden element
+    
+            hidden.classList.toggle("show");  // Toggle the 'show' class
+            hidden.style.display = hidden.classList.contains("show") ? "block" : "none";  // Update display based on 'show' class
+    
+            // Update button text
+            this.textContent = hidden.classList.contains("show") ? "See Less" : "See More";
         });
     </script>
+    
 
     <script>
         const changingText = document.querySelector('.changing-text');
