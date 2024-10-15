@@ -6,7 +6,9 @@
     background-position: right center; /* Push the image to the right, centered vertically */
     background-repeat: no-repeat; /* Ensure the image doesn’t repeat */
 }
- 
+.changing-text {
+    transition: opacity 0.5s ease; /* Smooth transition */
+}
 .container{
     padding: 10px 10%;
 }
