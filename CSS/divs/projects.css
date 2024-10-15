@@ -37,3 +37,11 @@
     background: #66BB6A;
     transform: translateY(-10px);
 }
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
