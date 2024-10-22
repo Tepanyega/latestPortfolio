@@ -56,7 +56,7 @@
                         <ul>
                             <li><span><i class="fas fa-code"></i> Programming Languages</span><br>Java, SQL, HTML, CSS, JavaScript</li>
                             <li><span><i class="fas fa-layer-group"></i> Frameworks & Libraries</span><br>Bootstrap</li>
-                            <li><span><i class="fas fa-cloud"></i> APIs</span><br>OpenWeatherMap API</li>
+                           <!-- <li><span><i class="fas fa-cloud"></i> APIs</span><br>OpenWeatherMap API</li>-->
                             <li><span><i class="fas fa-database"></i> Database Management</span><br>MySQL, PostgreSQL</li>
                             <li><span><i class="fas fa-code-branch"></i> Version Control</span><br>Git, GitHub</li>
                             <li><span><i class="fas fa-tasks"></i> SDLC Methodologies</span><br>Agile, Scrum</li>
@@ -201,6 +201,11 @@
         //attach event listeners
         document.querySelector(".fas.fa-bars").onclick = openmenu;
         document.querySelector(".fas.fa-times").onclick = closemenu;
+
+        //closing the sidemenu after the tab is clicked
+        sidemenu.querySelectorAll("li a").forEach(link => {
+            link.addEventListener('click', closemenu);
+        });
     });
     </script>
     <script>
