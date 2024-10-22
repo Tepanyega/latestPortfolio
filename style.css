@@ -21,7 +21,9 @@ body{
     background: url(images/stars-bg.png);
 
 }
- 
+#about, #project, #contact {
+    padding-top: 80px;   
+}
 .hidden{
     display: none;
 
@@ -34,6 +36,22 @@ nav .fas{
     display: none;
 
 }
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #080808;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+   background: #66BB6A;
+}
+ 
+
 @media (max-width: 297px) {
     #header {
         background-image: none; /* Remove the background image */
