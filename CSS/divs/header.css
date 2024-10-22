@@ -18,7 +18,13 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-   /* background-color: #333331;*/
+   
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1500;
+   padding: 10px 10%;
 }
  
 .logo{
