@@ -1,8 +1,8 @@
 @import url(CSS/divs/header.css);
 @import url(CSS/divs/about.css);
 @import url(CSS/divs/projects.css);
-@import url(CSS/divs/my_work.css);
 @import url(CSS/divs/contacts.css);
+@import url(CSS/divs/chatbot.css);
 
 *{
    
