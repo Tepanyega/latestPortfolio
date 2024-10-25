@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/divs/chatbot.css">
     <script src="https://kit.fontawesome.com/e947a0c937.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -163,16 +164,39 @@
     
                 </div>
         </div>
-        <!--adding a chatbot code-->
         <!-- Chatbot Icon -->
-        <div id="chatbot-icon" onclick="toggleChatWindow()">
-            <i class="fa-solid fa-message-bot" id="chatbot-icon"></i>
-        </div>
-        <!-- Chat Window -->
-        <div id="chat-window">
-            <div id="messages"></div>
-            <input type="text" id="user-input" placeholder="Type a message..." />
-            <button onclick="sendMessage()">Send</button>
+     <div id="chatbot-icon" class="chatbot-icon" onclick="toggleChatbot()">
+        🤖
+    </div>
+
+
+
+        <!-- Chatbot Container (Initially Hidden) -->
+        <div id="chatbot-container" class="chatbot-container hidden">
+            <div class="chat-header">
+                <h2>Bahle's Assistant 🤖</h2>
+                <button class="close-btn" onclick="toggleChatbot()">✖</button>
+            </div>
+            <div id="chat-box" class="chat-box">
+                <div class="bot-message">
+                    <p>Hi! 😊 I'm Sam's Assistant. How can I help you today?</p>
+                </div>
+                <div class="bot-message">
+                    <p>Choose one of the following options:</p>
+                    <ul>
+                        <li>1. 🛠️ My Skills</li>
+                        <li>2. 💼 My Experience</li>
+                        <li>3. 📞 Contact Information</li>
+                        <li>4. 📝 Projects</li>
+                        <li>5. 🕐 Availability</li>
+                        <li>6. 💬 Leave your details</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="user-input">
+                <input type="text" id="user-message" placeholder="Type your option here...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
         </div>
 
  
