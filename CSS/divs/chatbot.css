@@ -1,10 +1,23 @@
-/* Chatbot Icon */
+@keyframes shake-circle {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0); }
+}
+
 .chatbot-icon {
+    animation: shake-circle 0.5s ease-in-out infinite; /* Apply the circular shake animation */
+}
+
+
+/* Chatbot Icon */
+.chatbot-icon{
     font-size: 40px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ff69b4; /* hot pink */
+   /* background-color: #66BB6A; /* hot pink */
     padding: 15px;
     border-radius: 50%;
     cursor: pointer;
@@ -16,7 +29,7 @@
 .chatbot-container {
     width: 300px;  /* Adjusted to fit more content without scrolling */
     height: 400px;
-    background-color: #ffe4e1; /* light pink */
+    background: url(images/stars.bg.png); /* light pink */
     border-radius: 15px;
     position: fixed;
     bottom: 20px;
@@ -33,7 +46,7 @@
 
 /* Chat Header */
 .chat-header {
-    background-color: #ff69b4;
+    background-color: black;
     padding: 10px;
     border-radius: 15px 15px 0 0;
     text-align: center;
@@ -58,19 +71,20 @@
     padding: 10px;
     height: 270px;
     overflow-y: auto;
-    background-color: #fff;
+    background-color: black;
     border-radius: 0 0 10px 10px;
 }
 
 /* Bot Message */
 .bot-message {
-    background-color: #ffb6c1; /* light pink */
+    background-color: #66BB6A; /* light pink */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
     color: black;
     text-align: left;
     font-size: 14px;
+    font-weight: bold;
 }
 
 /* User Input */
@@ -78,19 +92,19 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #fff;
+    background-color: #34dc3c65;
     border-top: 1px solid #ccc;
 }
 
 .user-input input {
     flex-grow: 1;
     padding: 5px;
-    border: 1px solid #ff69b4;
+    border: 1px solid #66BB6A;
     border-radius: 5px;
 }
 
 .user-input button {
-    background-color: #ff69b4;
+    background-color: #66BB6A;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -111,4 +125,31 @@ ul#options-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
     gap: 10px; /* Add some space between items */
+}
+
+.quick-replies {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.quick-replies button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.quick-replies button:hover {
+    background-color: #55A054;
+}
+.hidden {
+    display: none;
 }
