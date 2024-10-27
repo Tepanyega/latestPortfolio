@@ -174,29 +174,37 @@
         <!-- Chatbot Container (Initially Hidden) -->
         <div id="chatbot-container" class="chatbot-container hidden">
             <div class="chat-header">
-                <h2>Bahle's Assistant 🤖</h2>
+                <h2>Chatbot 🤖</h2>
                 <button class="close-btn" onclick="toggleChatbot()">✖</button>
             </div>
             <div id="chat-box" class="chat-box">
                 <div class="bot-message">
-                    <p>Hi! 😊 I'm Sam's Assistant. How can I help you today?</p>
+                    <p>Hi! 😊 Hy, How can I help you today?</p>
                 </div>
-                <div class="bot-message">
+                <div id="quick-replies" class="quick-replies">
+                    <button onclick="sendMessage('1')">🛠️ Skills</button>
+                    <button onclick="sendMessage('2')">💼 Experience</button>
+                    <button onclick="sendMessage('3')">📞 Contact details</button>
+                    <button onclick="sendMessage('4')">📝 Projects</button>
+                
+                    <button onclick="sendMessage('5')">💬 Leave your details</button>
+                </div>
+                <div class="bot-message" hidden>
                     <p>Choose one of the following options:</p>
                     <ul>
-                        <li>1. 🛠️ My Skills</li>
-                        <li>2. 💼 My Experience</li>
-                        <li>3. 📞 Contact Information</li>
+                        <li>1. 🛠️ Skills</li>
+                        <li>2. 💼 Experience</li>
+                        <li>3. 📞 Contact details</li>
                         <li>4. 📝 Projects</li>
-                        <li>5. 🕐 Availability</li>
-                        <li>6. 💬 Leave your details</li>
+                        
+                        <li>5. 💬 Leave your details</li>
                     </ul>
                 </div>
             </div>
-            <div class="user-input">
-                <input type="text" id="user-message" placeholder="Type your option here...">
-                <button onclick="sendMessage()">Send</button>
-            </div>
+            <!-- Quick Replies Section -->
+
+
+            
         </div>
 
  
