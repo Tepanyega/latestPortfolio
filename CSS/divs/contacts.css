@@ -30,6 +30,7 @@
     transform: translate(-5px);
 }
 .btn.btn2{
+    margin-top: 5%;
     display: inline-block;
     background: #66BB6A;
 }
