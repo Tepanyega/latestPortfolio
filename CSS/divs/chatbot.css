@@ -46,7 +46,7 @@
 
 /* Chat Header */
 .chat-header {
-    background-color: black;
+    background-color: #262626;
     padding: 10px;
     border-radius: 15px 15px 0 0;
     text-align: center;
@@ -71,7 +71,7 @@
     padding: 10px;
     height: 270px;
     overflow-y: auto;
-    background-color: black;
+    background-color: #262626;
     border-radius: 0 0 10px 10px;
 }
 
@@ -81,7 +81,7 @@
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    color: black;
+    color: #262626;
     text-align: left;
     font-size: 14px;
     font-weight: bold;
@@ -136,7 +136,7 @@ ul#options-list {
 }
 
 .quick-replies button {
-    background-color: black;
+    background-color: #262626;
     color: white;
     border: none;
     padding: 5px 10px;
