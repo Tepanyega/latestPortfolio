@@ -82,11 +82,11 @@ function botResponse(option) {
             botDiv.innerHTML = `<p>📝 I worked on projects such as Admin Dashboard, Tinder meets, and E-commerce web apps.</p>`;
             break;
         case '5':
-            botDiv.innerHTML = `<p>💬 Please leave your <span>name</span> and <span>contact details</span>, and I'll get back to you:</p>`;
+            botDiv.innerHTML = `<p>💬 Please leave your  <span>contact details</span>, and I'll get back to you:</p>`;
             botDiv.innerHTML += `
-                <input type="text" id="user-name" placeholder="Your Name" required>
-                <input type="text" id="user-contact" placeholder="Your Contact Details (Email/Phone)" required>
-                <button onclick="saveContact()">Submit</button>`;
+                <input type="text" id="user-name" placeholder="Your Name" required style="background: #262626;">
+                <input type="text" id="user-contact" placeholder="Email..." required style="background: #262626;">
+                <button onclick="saveContact()" id="chatbutton"><i class="fa-solid fa-paper-plane"></i></button>`;
             break;
         default:
             botDiv.innerHTML = `<p>Sorry, I didn't understand that. Please choose one of the options.</p>`;
@@ -104,7 +104,7 @@ function saveContact() {
 
     if (userName && userContact) {
         // You can replace this alert with an email notification function in the future
-        alert(`Thank you ${userName}! We'll get back to you at ${userContact}.`);
+        //alert(`Thank you ${userName}! We'll get back to you at ${userContact}.`);
 
         // Reset input fields
         document.getElementById("user-name").value = "";
