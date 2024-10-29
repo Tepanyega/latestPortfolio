@@ -64,6 +64,9 @@ nav .fas{
    background-position: center 200px;
    
  }
+ .chatbot-icon{
+   display: none;
+ }
  .header-text{
     margin-top: 130%;
     font-size: 16px;
