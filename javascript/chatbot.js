@@ -1,28 +1,3 @@
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     function showSection(sectionId) {
-//         const sections = document.querySelectorAll('.section');
-//         sections.forEach(section => {
-//             section.classList.add('hidden');
-//         });
-//         const targetSection = document.getElementById(sectionId);
-//         targetSection.classList.remove('hidden');
-//     }
-
-//     const dropdown = document.querySelector('.dropdown');
-//     dropdown.addEventListener('click', () => {
-//         dropdown.classList.toggle('active');
-//     });
-
-//     const navLinks = document.querySelectorAll('ul.links a');
-//     navLinks.forEach(link => {
-//         link.addEventListener('click', () => {
-//             links.classList.remove('active');
-//             contactBtn.classList.remove('active');
-//         });
-//     });
-// });
-
 //chatbot
 // Toggle chatbot open and close
 function toggleChatbot() {
@@ -39,7 +14,6 @@ function toggleChatbot() {
         chatbotIcon.style.display = "block";  // Show icon
     }
 }
-
 
 // Handle sending messages and bot responses
 function sendMessage(option) {
@@ -59,7 +33,6 @@ function sendMessage(option) {
         botResponse(option);
     }, 500);
 }
-
 
 // Bot responses based on user input
 function botResponse(option) {
@@ -81,13 +54,10 @@ function botResponse(option) {
             botDiv.innerHTML = `<p>📝 I worked on projects such as Admin Dashboard, Tinder meets, and E-commerce web apps.</p>`;
             break;
         case '5':
-                // navigate to the contact section
-                window.location.hash = '#contact';
-                
-                // hide the chatbot
-                toggleChatbot(); 
-                return;
-                break;
+            window.location.hash = '#contact';
+            toggleChatbot(); 
+            return;
+            break;
         default:
             botDiv.innerHTML = `<p>Sorry, I didn't understand that. Please choose one of the options.</p>`;
     }
