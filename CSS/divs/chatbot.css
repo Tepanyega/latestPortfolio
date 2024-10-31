@@ -168,3 +168,7 @@ form input, form textarea{
     background: #262626;
  
 }
+
+.closed{
+    display: none;
+}
