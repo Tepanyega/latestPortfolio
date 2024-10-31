@@ -2,7 +2,7 @@
 @import url(CSS/divs/about.css);
 @import url(CSS/divs/projects.css);
 @import url(CSS/divs/contacts.css);
-@import url(CSS/divs/chatbot.css);
+/*@import url(CSS/divs/chatbot.css);*/
 
 *{
    
@@ -63,6 +63,9 @@ nav .fas{
     background-size: 50%;
    background-position: center 200px;
    
+ }
+ .chatbot-icon{
+   display: none;
  }
  .header-text{
     margin-top: 130%;

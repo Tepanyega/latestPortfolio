@@ -60,8 +60,9 @@ nav ul li a:hover::after{
 }
  
 .header-text{
-    margin-top: 20%;
+    margin-top: 15%;
     font-size: 30px;
+
 }
  
 .header-text h1{

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/divs/chatbot.css">
     <script src="https://kit.fontawesome.com/e947a0c937.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -27,8 +28,9 @@
             </nav>
             <div class="header-text">
                 <p>software developer</p>
-                <h1>Hi, I'm <span>Samuel </span><br><span>Tepanyega</span> <br>I'm a<br><span class="changing-text">Database...</span></h1>
+                <h1>Hi, I'm <span>Samuel </span><br><span>Tepanyega</span> <br>I'm a <span class="changing-text">Database...</span></h1>
             </div>
+            <a href="images/resume.docx" download class="btn btn2">Download CV</a>
         </div>
     </div>
     <!-- -------------about -------------------- -->
@@ -99,7 +101,7 @@
                         <p>
                             I developed an e-commerce website using HTML,CSS, SQL, and PHP framework that allows users to browse, add products to cart, and make purchases.
                         </p>
-                        <a href="https://github.com/Tepanyega/E-commerce">learn more</a>
+                        <a href="https://github.com/Tepanyega/E-commerce" class="learn">learn more</a>
                     </div>
                     <div>
                         <i class="fa-solid fa-cloud"></i>
@@ -108,14 +110,14 @@
                             I developed a weather app using HTML, CSS, and JavaScript that displays the current weather conditions and forecasts for the next 5 days.
                         
                         </p>
-                        <a href="https://github.com/Tepanyega/weather-frontEnd">learn more</a>
+                        <a href="https://github.com/Tepanyega/weather-frontEnd" class="learn">learn more</a>
                     </div>
                    <div class="hidden">
                         <i class="fa-brands fa-researchgate"></i>
                         <h2>Research project</h2>
                         <p>The recognition of human emotion in conversation for call centre task enhancement.
                          </p>
-                        <a href="https://docs.google.com/document/d/14obqQk_LMZfS65PeDqyeb5c1B86ALWgS0eDulkNUyyo/edit?usp=sharing">learn more</a>
+                        <a href="https://docs.google.com/document/d/14obqQk_LMZfS65PeDqyeb5c1B86ALWgS0eDulkNUyyo/edit?usp=sharing" class="learn">learn more</a>
                     </div>
                 </div>
                 <!--<button class="btn">See more</button>-->
@@ -140,7 +142,7 @@
                             <a href="https://www.linkedin.com/in/tepanyega/"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="https://github.com/Tepanyega"><i class="fa-brands fa-github"></i></a>
                         </div>
-                        <a href="images/resume.docx" download class="btn btn2">Download CV</a>
+                        
                        
                     </div>
  
@@ -163,7 +165,43 @@
     
                 </div>
         </div>
+        <!-- Chatbot Icon -->
+     <div id="chatbot-icon" class="chatbot-icon" onclick="toggleChatbot()">
+        🤖
+    </div>
 
+
+
+        <!-- Chatbot Container (Initially Hidden) -->
+        <div id="chatbot-container" class="chatbot-container hidden">
+            <div class="chat-header">
+                <h2>Chatbot 🤖</h2>
+                <button class="close-btn" onclick="toggleChatbot()">✖</button>
+            </div>
+            <div id="chat-box" class="chat-box">
+                <div class="bot-message">
+                    <p>Hi! 😊 Choose one of the following options:</p>
+                </div>
+                <div id="quick-replies" class="quick-replies">
+                    <button onclick="sendMessage('1')">🛠️ Skills</button>
+                    <button onclick="sendMessage('2')">💼 Experience</button>
+                    <button onclick="sendMessage('3')">📞 Contact details</button>
+                    <button onclick="sendMessage('4')">📝 Projects</button>
+                
+                    <button onclick="sendMessage('5')">💬 Leave your details</button>
+                </div>
+                <div class="bot-message" hidden>
+                    <p>Choose one of the following options:</p>
+                    <ul>
+                        <li>1. 🛠️ Skills</li>
+                        <li>2. 💼 Experience</li>
+                        <li>3. 📞 Contact details</li>
+                        <li>4. 📝 Projects</li>  
+                        <li>5. 💬 Leave your details</li>
+                    </ul>
+                </div>
+            </div>          
+        </div>
 
  
    
