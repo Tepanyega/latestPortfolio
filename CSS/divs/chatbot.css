@@ -81,7 +81,7 @@
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    color: #262626;
+    color: black;
     text-align: left;
     font-size: 14px;
     font-weight: bold;
@@ -129,8 +129,8 @@ ul#options-list {
 
 .quick-replies {
     
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;flex-direction: column;
+    /* flex-wrap: wrap; */
     justify-content: center;
     margin-top: 10px;
 }
