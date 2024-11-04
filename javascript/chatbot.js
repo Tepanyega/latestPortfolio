@@ -1,28 +1,3 @@
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     function showSection(sectionId) {
-//         const sections = document.querySelectorAll('.section');
-//         sections.forEach(section => {
-//             section.classList.add('hidden');
-//         });
-//         const targetSection = document.getElementById(sectionId);
-//         targetSection.classList.remove('hidden');
-//     }
-
-//     const dropdown = document.querySelector('.dropdown');
-//     dropdown.addEventListener('click', () => {
-//         dropdown.classList.toggle('active');
-//     });
-
-//     const navLinks = document.querySelectorAll('ul.links a');
-//     navLinks.forEach(link => {
-//         link.addEventListener('click', () => {
-//             links.classList.remove('active');
-//             contactBtn.classList.remove('active');
-//         });
-//     });
-// });
-
 //chatbot
 // Toggle chatbot open and close
 function toggleChatbot() {
@@ -40,17 +15,20 @@ function toggleChatbot() {
     }
 }
 
-
 // Handle sending messages and bot responses
 function sendMessage(option) {
     var chatBox = document.getElementById("chat-box");
 
+    //clear previous messages
+    
     // Display user message
     var userDiv = document.createElement("div");
     userDiv.classList.add("user-message");
     userDiv.innerHTML = `<p>Option ${option} selected.</p>`;
     //chatBox.appendChild(userDiv);
 
+    // Clear previous bot responses
+    clearBotResponses();
     // Scroll to bottom of the chat box
     chatBox.scrollTop = chatBox.scrollHeight;
 
@@ -59,8 +37,15 @@ function sendMessage(option) {
         botResponse(option);
     }, 500);
 }
-
-
+// Clear bot responses from the chat box
+function clearBotResponses() {
+    var chatBox = document.getElementById("chat-box");
+    // Get all bot messages and remove them
+    var botMessages = chatBox.getElementsByClassName("bot-message");
+    while (botMessages.length > 0) {
+        botMessages[0].remove();
+    }
+}
 // Bot responses based on user input
 function botResponse(option) {
     var chatBox = document.getElementById("chat-box");
@@ -72,22 +57,19 @@ function botResponse(option) {
             botDiv.innerHTML = `<p>🛠️ My skills include HTML, CSS, JavaScript, Java...!</p>`;
             break;
         case '2':
-            botDiv.innerHTML = `<p>💼 I am a software developer!</p>`;
+            botDiv.innerHTML = `<p>💼 Former ICT Assistant, providing technical support for the MS Office suite, assisting with email setup and password recovery, and maintaining order in computer labs. Currently a software developer.</p>`;
             break;
         case '3':
-            botDiv.innerHTML = `<p>📞 You can contact me via email at samuelmonepe@gmail.com or WhatsApp at +27-75060-9435.</p>`;
+            botDiv.innerHTML = `<p>📞 You can contact me via email at <span style="color: #262626;">samuelmonepe@gmail.com</span> or WhatsApp at <span style="color: #262626;">+27-75060-9435.</span></p>`;
             break;
         case '4':
             botDiv.innerHTML = `<p>📝 I worked on projects such as Admin Dashboard, Tinder meets, and E-commerce web apps.</p>`;
             break;
         case '5':
-                // navigate to the contact section
-                window.location.hash = '#contact';
-                
-                // hide the chatbot
-                toggleChatbot(); 
-                return;
-                break;
+            window.location.hash = '#contact';
+            toggleChatbot(); 
+            return;
+            break;
         default:
             botDiv.innerHTML = `<p>Sorry, I didn't understand that. Please choose one of the options.</p>`;
     }
