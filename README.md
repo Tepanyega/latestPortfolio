@@ -42,7 +42,20 @@
   - Clicking the phone number prompts a phone call on mobile devices.
 - Social media links (LinkedIn, GitHub, Instagram, and Twitter).
 - A contact form for submitting messages through Google Sheets.
-  
+
+# 5. Chatbot Project 🤖
+  # Features
+  -  Skills: Displays the developer’s key technical skills.
+  -  Experience: Provides an overview of professional experience.
+  -  Contact details: Shares contact information.
+  -  Projects: Lists key projects and accomplishments.
+  -  Leave your details: Allows users to provide their contact information.
+     ## Usage
+      - Click the chatbot icon 🤖 to open the chatbot window.
+      - Select any option from the quick replies to receive specific information.
+      - Close the chatbot by clicking the "✖" button in the top-right corner.
+
+
 # How to Use
 
 # Running the Project Locally
